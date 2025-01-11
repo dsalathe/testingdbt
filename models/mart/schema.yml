@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_departments
+    description: "Department dimension table with aggregated metrics"
+    columns:
+      - name: department
+        description: "Department name - Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: employee_count
+        description: "Number of employees in department"
+        tests:
+          - not_null
+          - positive_value

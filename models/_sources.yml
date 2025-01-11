@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
+    tables:
+      - name: people
+        description: "Raw people data loaded from JSON files"
+        columns:
+          - name: id
+            description: "The unique identifier for the person"
+          - name: name
+            description: "The person's full name"
+          - name: email
+            description: "The person's email address"
+          - name: department
+            description: "The person's department"

@@ -1,0 +1,11 @@
+oxadidbt:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server'
+      server: oxadiserver.database.windows.net
+      port: 1433
+      database: oxadidb
+      schema: dbt_transformations
+      authentication: CLI

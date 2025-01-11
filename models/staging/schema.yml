@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_people
+    description: "Staged people data from JSON source"
+    columns:
+      - name: id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Person's full name"
+        tests:
+          - not_null
+      - name: email
+        description: "Email address"
+        tests:
+          - not_null
+      - name: department
+        description: "Department name"
+        tests:
+          - not_null

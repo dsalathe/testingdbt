@@ -1,0 +1,24 @@
+name: 'oxadidbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'oxadidbt'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_packages"
+
+models:
+  oxadidbt:
+    staging:
+      +materialized: view
+      +schema: staging
+    mart:
+      +materialized: table
+      +schema: mart
